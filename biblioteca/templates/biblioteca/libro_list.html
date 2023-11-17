@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css"
+      &gt;
+    />
+    <title>Listar libros</title>
+  </head>
+
+  <body>
+    {%for libro in libro_list%}
+    <h2>Título:</h2>
+    <p>{{libro.title}}</p>
+    <h2>Autor:</h2>
+    <p>{{libro.author}}</p>
+    <h2>Puntuación:</h2>
+    <p>{{libro.rating}}</p>
+    <a href="{% url 'detalle_libro' pk=libro.pk %}" role="button"
+      >Ver detalles</a
+    >
+    {%endfor%}
+
+    <a href="{% url 'añadir_libros' %}">Añadir libro</a>
+  </body>
+</html>
