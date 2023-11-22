@@ -12,7 +12,7 @@
     <h1>Editando el libro {{libro.title}}</h1>
     <form action="" method="post">
         {%csrf_token%}{{form.as_p}}
-        <button type="submit">Editar este libro</button>
+        <button type="submit" value="Update">Editar este libro</button>
     </form>
     <a href="{% url 'listar_libros' %}" role="button">Listar libros</a>
 

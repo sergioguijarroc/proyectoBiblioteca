@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css" &gt;>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css"
+      &gt;
+    />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h2>Detalles del libro:</h2>
     <p><strong>Titulo:</strong> {{ libro.title }}</p>
     <p><strong>Autor:</strong> {{ libro.author }}</p>
@@ -18,6 +21,6 @@
     <p><strong>Fecha de actualización:</strong> {{ libro.updated_at }}</p>
     <a href="{% url 'listar_libros' %}">Listar libros</a>
     <a href="{% url 'editar_libro' libro.pk %}">Editar libro</a>
-</body>
-
+    <a href="{% url 'eliminar' libro.pk%}">Eliminar libro</a>
+  </body>
 </html>
